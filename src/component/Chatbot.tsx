@@ -1,13 +1,13 @@
 
 import React, { useState, useEffect, useRef} from 'react';
-import { BASEURL, MODEL } from'../constants/bots';
+import { BASEURL, MODEL, REACT_APP_OPENAI_API_KEY } from'../constants/bots';
 import OpenAI from "openai";
 import "./chatbot.css";
 import loader from '../assets/loading.webp';
 
 const client = new OpenAI({
     baseURL: BASEURL,
-    apiKey: process.env.REACT_APP_OPENAI_API_KEY,
+    apiKey: REACT_APP_OPENAI_API_KEY,
     dangerouslyAllowBrowser: true
   });
 
